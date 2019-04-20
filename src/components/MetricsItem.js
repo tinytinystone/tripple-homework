@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import CountUp from "react-countup";
 import "./MetricsItem.css";
 
 export default class MetricsItem extends Component {
@@ -7,7 +8,7 @@ export default class MetricsItem extends Component {
     return (
       <div className="metrics__item">
         <strong>
-          {num} {unit}
+          <CountUp start={1} end={num} separator="," />만 {unit}
         </strong>
         의 {category}
       </div>

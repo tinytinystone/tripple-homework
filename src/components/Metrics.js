@@ -10,9 +10,24 @@ export default class Metrics extends Component {
     });
     return (
       <div className={metricsClass}>
-        <MetricsItem num={"360만"} unit={"명"} category={"사용자"} />
-        <MetricsItem num={"35만"} unit={"개"} category={"리뷰"} />
-        <MetricsItem num={"1,100만"} unit={"개"} category={"저장"} />
+        <MetricsItem
+          num={this.props.on && 360}
+          unit={"명"}
+          category={"사용자"}
+          on={this.props.on}
+        />
+        <MetricsItem
+          num={this.props.on && 35}
+          unit={"개"}
+          category={"리뷰"}
+          on={this.props.on}
+        />
+        <MetricsItem
+          num={this.props.on && 1100}
+          unit={"개"}
+          category={"저장"}
+          on={this.props.on}
+        />
       </div>
     );
   }
