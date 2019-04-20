@@ -12,11 +12,11 @@ class App extends Component {
     };
   }
   componentDidMount = () => {
-    window.onload = () => {
+    window.addEventListener("load", () => {
       this.setState({
         isLoadCompleted: true
       });
-    };
+    });
   };
   render() {
     const { isLoadCompleted } = this.state;
