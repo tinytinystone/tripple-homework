@@ -1,0 +1,31 @@
+.awards {
+  margin: 50px 0 140px 623px;
+}
+.awards.fadeBefore {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.awards.fadeEnter {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 700ms ease-in-out 200ms;
+}
+.awards__item {
+  background-size: 54px 54px;
+  height: 54px;
+  font-size: 14px;
+  line-height: 1.57;
+  margin-right: 39px;
+  padding: 5px 0 5px 62px;
+  display: inline-block;
+  color: rgba(58, 58, 58, 0.8);
+  font-weight: bold;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+.item__google {
+  background-image: url(./resources/play-store@2x.png);
+}
+.item__apple {
+  background-image: url(./resources/app-store@2x.png);
+}
