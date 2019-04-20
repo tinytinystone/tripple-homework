@@ -1,12 +1,12 @@
 # Tripple 과제
 
-## 사용 기술
+## dependencies
 
-create-react-app
-classnames
-react-countup
+- create-react-app
+- classnames
+- react-countup
 
-## build
+## how to run
 
 ```
 yarn install
