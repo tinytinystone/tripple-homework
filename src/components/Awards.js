@@ -1,29 +1,18 @@
 import React, { Component } from "react";
 import classNames from "classnames";
+import playStore from "./resources/play-store@2x.png";
+import appStore from "./resources/app-store@2x.png";
 import "./Awards.css";
 
 export default class Awards extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mountOnEnter: false
-    };
-  }
-  componentDidMount() {
-    // FIXME: 배경이미지 로드된 이후에 setState될 수 있도록 처리 필요
-    setTimeout(() =>
-      this.setState({
-        mountOnEnter: true
-      })
-    );
-  }
   render() {
     const awardsClass = classNames("awards", "fadeBefore", {
-      fadeEnter: this.state.mountOnEnter
+      fadeEnter: this.props.on
     });
     return (
       <div className={awardsClass}>
         <div className="awards__item item__google">
+          <img src={playStore} alt="" className="awards__item__image" />
           <span className="awards__item__text">
             2018 구글 플레이스토어
             <br />
@@ -31,6 +20,7 @@ export default class Awards extends Component {
           </span>
         </div>
         <div className="awards__item item__apple">
+          <img src={appStore} alt="" className="awards__item__image" />
           <span className="awards__item__text">
             2018 애플 앱스토어
             <br />

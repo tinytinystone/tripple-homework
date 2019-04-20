@@ -5,12 +5,26 @@ import Metrics from "./components/Metrics";
 import Awards from "./components/Awards";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoadCompleted: false
+    };
+  }
+  componentDidMount = () => {
+    window.onload = () => {
+      this.setState({
+        isLoadCompleted: true
+      });
+    };
+  };
   render() {
+    const { isLoadCompleted } = this.state;
     return (
       <div className="App">
-        <Logo />
-        <Metrics />
-        <Awards />
+        <Logo on={isLoadCompleted} />
+        <Metrics on={isLoadCompleted} />
+        <Awards on={isLoadCompleted} />
       </div>
     );
   }

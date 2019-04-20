@@ -4,23 +4,9 @@ import classNames from "classnames";
 import "./Metrics.css";
 
 export default class Metrics extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mountOnEnter: false
-    };
-  }
-  componentDidMount() {
-    // FIXME: 배경이미지 로드된 이후에 setState될 수 있도록 처리 필요
-    setTimeout(() =>
-      this.setState({
-        mountOnEnter: true
-      })
-    );
-  }
   render() {
     const metricsClass = classNames("metrics", "fadeBefore", {
-      fadeEnter: this.state.mountOnEnter
+      fadeEnter: this.props.on
     });
     return (
       <div className={metricsClass}>
